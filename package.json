@@ -1,0 +1,22 @@
+{
+  "name": "decentralisedapp",
+  "version": "1.0.0",
+  "description": "decentralised app using web3js for rendering frontend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vaibnak/frontendUsingweb3js.git"
+  },
+  "author": "vaibnak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vaibnak/frontendUsingweb3js/issues"
+  },
+  "homepage": "https://github.com/vaibnak/frontendUsingweb3js#readme",
+  "dependencies": {
+    "web3": "github:ethereum/web3.js"
+  }
+}
