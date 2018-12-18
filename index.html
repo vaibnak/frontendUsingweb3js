@@ -22,7 +22,7 @@
 <label for="name" class="col-lg-2 control-label">Instructor Age</label>
  <input id="age" type="text">
 
-<button id="button">Update Instructor</button>
+<button id="button" onclick="submitdata()">Update Instructor</button>
 
 </div>
 
@@ -104,6 +104,31 @@
 ])
 
 var Courses = CoursesContract.at('0x03331c450259f1c29f01c44326c34c86e4c14466');
+Courses._tname(function(err, cnd) {
+  if(err) {
+    console.log(err);
+  } else {
+    $("#instructor").text(cnd);
+    console.log(cnd);
+  }
+})
+
+function setName() {
+  $('#instructor').text(Courses._tname());
+}
+
+function setAge() {
+  console.log(Courses._age().c[0]);
+  $('#instructor').append(Courses._age().c[0]);
+}
+
+function submitdata(){
+  var ag = document.getElementById("age").value;
+  var nm = document.getElementById("name").value;
+  Courses.setInstructor(nm, ag);
+  setName();
+  setAge();
+}
 
  </script>
 
